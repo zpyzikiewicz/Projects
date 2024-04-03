@@ -1,0 +1,103 @@
+\doxysection{Dokumentacja pliku funkcje.\+h}
+\hypertarget{funkcje_8h}{}\label{funkcje_8h}\index{funkcje.h@{funkcje.h}}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{funkcje_8h_aa372a7d0c59acceacd65a1cbf577418c}{print\+\_\+v}} (const std\+::vector$<$ int $>$ \&v)
+\item 
+void \mbox{\hyperlink{funkcje_8h_ad23687a956f4b79a411095a586f59ecc}{print\+\_\+f}} (const std\+::vector$<$ int $>$ \&v, std\+::ofstream \&fout)
+\item 
+void \mbox{\hyperlink{funkcje_8h_ae94744a01d8a787c98366e24797835f2}{print\+\_\+mv}} (const std\+::unordered\+\_\+map$<$ int, std\+::vector$<$ int $>$ $>$ \&mv)
+\item 
+std\+::unordered\+\_\+map$<$ int, bool $>$ \mbox{\hyperlink{funkcje_8h_ae06ec5a97aceedb711e78f0af4a8d2b6}{visited\+\_\+map1}} (std\+::unordered\+\_\+map$<$ int, std\+::vector$<$ int $>$ $>$ \&mv)
+\item 
+void \mbox{\hyperlink{funkcje_8h_a1d2d2bb7f4758a2ef7198e8412b17205}{read}} (std\+::ifstream \&fin, std\+::unordered\+\_\+map$<$ int, std\+::vector$<$ int $>$ $>$ \&graph1)
+\item 
+void \mbox{\hyperlink{funkcje_8h_a6e61681472c70f2591ad99972c27b75f}{DFS}} (std\+::unordered\+\_\+map$<$ int, std\+::vector$<$ int $>$ $>$ \&graph1, int v, int w, std\+::vector$<$ int $>$ \&stack, std\+::unordered\+\_\+map$<$ int, bool $>$ \&visited, std\+::ofstream \&fout)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{funkcje_8h_a6e61681472c70f2591ad99972c27b75f}\label{funkcje_8h_a6e61681472c70f2591ad99972c27b75f} 
+\index{funkcje.h@{funkcje.h}!DFS@{DFS}}
+\index{DFS@{DFS}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{\texorpdfstring{DFS()}{DFS()}}
+{\footnotesize\ttfamily void DFS (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ int, std\+::vector$<$ int $>$ $>$ \&}]{graph1,  }\item[{int}]{v,  }\item[{int}]{w,  }\item[{std\+::vector$<$ int $>$ \&}]{stack,  }\item[{std\+::unordered\+\_\+map$<$ int, bool $>$ \&}]{visited,  }\item[{std\+::ofstream \&}]{fout }\end{DoxyParamCaption})}
+
+Funkcja przy użyciu algorytmu Depth-\/first Search znajduje w grafie wszystkie cykle zawierające dany wierzchołek i wypisuje je na ekran oraz do pliku wyjściowego. 
+\begin{DoxyParams}{Parametry}
+{\em graph1} & graf \\
+\hline
+{\em v} & wierzchołek początkowy \\
+\hline
+{\em w} & wierzchołek aktualny \\
+\hline
+{\em stack} & wektor w roli stosu śledzący cykle \\
+\hline
+{\em visited} & mapa przechowująca informację, czy dany wierzchołek był już odwiedzony \\
+\hline
+{\em fout} & strumień do pliku wyjściowego \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcje_8h_ad23687a956f4b79a411095a586f59ecc}\label{funkcje_8h_ad23687a956f4b79a411095a586f59ecc} 
+\index{funkcje.h@{funkcje.h}!print\_f@{print\_f}}
+\index{print\_f@{print\_f}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{\texorpdfstring{print\_f()}{print\_f()}}
+{\footnotesize\ttfamily void print\+\_\+f (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{v,  }\item[{std\+::ofstream \&}]{fout }\end{DoxyParamCaption})}
+
+Funkcja zapisuje wektor do pliku. 
+\begin{DoxyParams}{Parametry}
+{\em v} & wektor liczb całkowitych \\
+\hline
+{\em fout} & strumień do pliku wyjściowego \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcje_8h_ae94744a01d8a787c98366e24797835f2}\label{funkcje_8h_ae94744a01d8a787c98366e24797835f2} 
+\index{funkcje.h@{funkcje.h}!print\_mv@{print\_mv}}
+\index{print\_mv@{print\_mv}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{\texorpdfstring{print\_mv()}{print\_mv()}}
+{\footnotesize\ttfamily void print\+\_\+mv (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ int, std\+::vector$<$ int $>$ $>$ \&}]{mv }\end{DoxyParamCaption})}
+
+Funkcja wypisuje na ekran nieuporządkowaną mapę. Używana do wypisywania grafu. 
+\begin{DoxyParams}{Parametry}
+{\em mv} & nieuporządkowana mapa liczb całkowitych i wektorów liczb całkowitych. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcje_8h_aa372a7d0c59acceacd65a1cbf577418c}\label{funkcje_8h_aa372a7d0c59acceacd65a1cbf577418c} 
+\index{funkcje.h@{funkcje.h}!print\_v@{print\_v}}
+\index{print\_v@{print\_v}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{\texorpdfstring{print\_v()}{print\_v()}}
+{\footnotesize\ttfamily void print\+\_\+v (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{v }\end{DoxyParamCaption})}
+
+Funkcja wypisuje na ekran wektor liczb całkowitych. 
+\begin{DoxyParams}{Parametry}
+{\em v} & wektor liczb całkowitych \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcje_8h_a1d2d2bb7f4758a2ef7198e8412b17205}\label{funkcje_8h_a1d2d2bb7f4758a2ef7198e8412b17205} 
+\index{funkcje.h@{funkcje.h}!read@{read}}
+\index{read@{read}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void read (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{fin,  }\item[{std\+::unordered\+\_\+map$<$ int, std\+::vector$<$ int $>$ $>$ \&}]{graph1 }\end{DoxyParamCaption})}
+
+Funkcja czyta z pliku graf do nieuporządkowanej mapy, w której klucz to wierzchołek, a wartość -\/ wektor sąsiadów. 
+\begin{DoxyParams}{Parametry}
+{\em fin} & strumień do pliku wejściowego \\
+\hline
+{\em graph1} & graf \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcje_8h_ae06ec5a97aceedb711e78f0af4a8d2b6}\label{funkcje_8h_ae06ec5a97aceedb711e78f0af4a8d2b6} 
+\index{funkcje.h@{funkcje.h}!visited\_map1@{visited\_map1}}
+\index{visited\_map1@{visited\_map1}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{\texorpdfstring{visited\_map1()}{visited\_map1()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ int, bool $>$ visited\+\_\+map1 (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ int, std\+::vector$<$ int $>$ $>$ \&}]{mv }\end{DoxyParamCaption})}
+
+Funkcja tworzy mapę visited liczb całkowitych i wartości logicznych do sprawdzania, które wierzchołki zostały odwiedzone. 
+\begin{DoxyParams}{Parametry}
+{\em mv} & graf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+mapa nieuporządkowana liczb całkowitych i wartości logicznych visited 
+\end{DoxyReturn}
